@@ -166,7 +166,7 @@ Monash University
 
 These slides can be found at:<br><br>
 <center>
-<i class="fas fa-link"></i> <a class="white"  href="https://emitanaka.org/slides/DARE-LOOP">emitanaka.org/slides-DARE-LOOP</a></center><br>
+<i class="fas fa-link"></i> <a class="white"  href="https://emitanaka.org/slides-DARE-LOOP">emitanaka.org/slides-DARE-LOOP</a></center><br>
 These slides are made using the xaringan R-package, powered by remark.js, and all the source code to reproduce these slides are available at:<br><br>
 <center><i class="fab fa-github"></i> <a class="white " href="https:://github.com/emitanaka/slides-DARE-LOOP">github.com/emitanaka/slides-DARE-LOOP</a></center>
 
@@ -890,7 +890,7 @@ start_design("Modified allocation") %>%
 .w-20[
 ]
 .w-80[
-<i class="fas fa-link"></i> [emitanaka.org/slides-DARE-LOOP](https://emitanaka.org/slides/DARE-LOOP)  
+<i class="fas fa-link"></i> [emitanaka.org/slides-DARE-LOOP](https://emitanaka.org/slides-DARE-LOOP)  
 <i class="fab fa-github"></i> [https://github.com/emitanaka/slides-DARE-LOOP](github.com/emitanaka/slides-DARE-LOOP)
 ]
 ]
