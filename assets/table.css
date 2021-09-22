@@ -1,0 +1,22 @@
+table  {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  font-size: 18pt;
+  display: table;
+  border-collapse: separate;
+  text-indent: initial;
+  border-spacing: 0px;
+  border-color: transparent;
+}
+table thead th  { border-bottom: 1px solid #ddd; }
+th , td  { padding: 5px; }
+thead , tfoot , tr:nth-child(even)  { background: #eee }
+td .remark-code, td code, tr .remark-code, tr code {
+  font-size: 1em!important;
+}
+tr.red td .remark-code, tr.red td.remark-code {
+  color: red!important;
+}
+
+

@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Visual Inference and Experimental Design</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Emi Tanaka" />
+    <script src="lib/header-attrs-2.10/header-attrs.js"></script>
+    <link href="lib/remark-css-0.0.1/ninjutsu.css" rel="stylesheet" />
+    <script src="lib/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
+    <script src="assets/panelset-modified.js"></script>
+    <!--
+    <script defer src="assets/all.min.js"></script>
+
+    Need below to enable css contents
+
+    <script>
+      window.FontAwesomeConfig = {
+        searchPseudoElements: true
+      }
+    </script>
+
+    -->
+    <link rel="stylesheet" href="assets/font-awesome-all.css" type="text/css" />
+    <link rel="stylesheet" href="assets/tachyons-addon.css" type="text/css" />
+    <link rel="stylesheet" href="assets/animate.css" type="text/css" />
+    <link rel="stylesheet" href="assets/fira-code.css" type="text/css" />
+    <link rel="stylesheet" href="assets/boxes.css" type="text/css" />
+    <link rel="stylesheet" href="assets/table.css" type="text/css" />
+    <link rel="stylesheet" href="assets/styles.css" type="text/css" />
+    <link rel="stylesheet" href="assets/monash-brand.css" type="text/css" />
+    <link rel="stylesheet" href="assets/monash-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/slide-types.css" type="text/css" />
+    <link rel="stylesheet" href="assets/panelset-modified.css" type="text/css" />
+    <link rel="stylesheet" href="assets/scroll.css" type="text/css" />
+    <link rel="stylesheet" href="assets/custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+class: middle center hide-slide-number monash-bg-gray80
+
+
+
+
+
+.info-box.w-50.bg-white.f3[
+These slides are viewed best by Chrome or Firefox and occasionally need to be refreshed if elements did not load properly. See &lt;a href=emi-tanaka-talk.pdf&gt;here for the PDF &lt;i class="fas fa-file-pdf"&gt;&lt;/i&gt;&lt;/a&gt;. 
+]
+
+&lt;br&gt;
+
+.white[Press the **right arrow** to progress to the next slide!]
+
+
+
+---
+
+count: false
+class: title-slide
+background-image: url("images/bg-01.png")
+
+.w-85[
+# .f1[Visual Inference and Experimental Design]
+]
+
+&lt;br&gt;
+
+&lt;h2 style="font-weight:900!important;"&gt;&lt;/h2&gt;
+
+.bottom_abs.width100[
+
+Presenter: *Emi Tanaka*
+
+.f3[
+Department of Econometrics and Business Statistics
+
+&lt;i class="fas fa-envelope"&gt;&lt;/i&gt;  emi.tanaka@monash.edu &amp;nbsp;&amp;nbsp;&lt;i class="fab fa-twitter"&gt;&lt;/i&gt; @statsgen
+
+&lt;i class="fas fa-calendar-alt"&gt;&lt;/i&gt; Wed 22nd Sep 2021
+
+&lt;br&gt;
+
+]]
+
+
+---
+
+class: fullscreen
+
+.flex.h-100[
+.w-30.monash-bg-blue.white.pa3[
+
+&lt;br&gt;
+
+.f1[**Emi Tanaka**]
+
+&lt;img src="https://emitanaka.org/images/avatar.jpg" width = "140px" style="border: 3px solid black; border-radius: 4px;"&gt;
+
+*Lecturer in statistics*  
+Monash University
+
+.f3.lh-copy[
+&lt;i class="fas fa-envelope"&gt;&lt;/i&gt; emi.tanaka@monash.edu  
+&lt;i class="fab fa-twitter"&gt;&lt;/i&gt; @statsgen  
+&lt;i class="fab fa-github"&gt;&lt;/i&gt; emitanaka  
+&lt;i class="fas fa-globe"&gt;&lt;/i&gt; emitanaka.org
+]
+
+]
+.w-70.pa3.f1[
+.monash-blue[&lt;i class="fas fa-book-open"&gt;&lt;/i&gt; **Table of Contents**]
+
+.f2.pa3.lh-copy[
+
+.box[1] Introduction to Visual inference  
+.box[2] The Grammar of Experimental Designs  
+.box[3] Main interests and contributions summary
+
+{{content}}
+
+]
+
+]]
+
+
+--
+
+&lt;div class="border-box monash-bg-blue2 white f3"&gt;
+
+These slides can be found at:&lt;br&gt;&lt;br&gt;
+&lt;center&gt;
+&lt;i class="fas fa-link"&gt;&lt;/i&gt; &lt;a class="white"  href="https://emitanaka.org/slides/DARE-LOOP"&gt;emitanaka.org/slides-DARE-LOOP&lt;/a&gt;&lt;/center&gt;&lt;br&gt;
+These slides are made using the xaringan R-package, powered by remark.js, and all the source code to reproduce these slides are available at:&lt;br&gt;&lt;br&gt;
+&lt;center&gt;&lt;i class="fab fa-github"&gt;&lt;/i&gt; &lt;a class="white " href="https:://github.com/emitanaka/slides-DARE-LOOP"&gt;github.com/emitanaka/slides-DARE-LOOP&lt;/a&gt;&lt;/center&gt;
+
+&lt;/div&gt;
+
+---
+
+
+class: transition 
+
+# Introduction to &lt;br&gt;.yellow[Visual Inference]
+
+
+---
+
+# .yellow[Assessing data plots] &lt;i class="fas fa-gavel"&gt;&lt;/i&gt; Case study with residual plots .f4[Part 1]
+
+.flex.h-100[
+.w-60[
+
+* Model diganostics are cruicial if inferences are to be made on the model
+
+
+{{content}}
+
+]
+.w-40[
+&lt;img src="images/resplot-1.png" width="360" style="display: block; margin: auto;" /&gt;
+
+]]
+
+--
+
+* A common model diagnostic is to look at residual plots and to search for any patterns
+{{content}}
+--
+
+* If there is a pattern, it is indicative of a misspecified model
+{{content}}
+--
+
+* **Do you see a pattern on the plot in the right?**
+
+---
+
+# .yellow[Assessing data plots] &lt;i class="fas fa-gavel"&gt;&lt;/i&gt; Plots are also statistics
+
+.flex[
+.w-70.pa3[
+* In statistics, we are careful in assessing __*numerical* statistics__ by taking into account its uncertainty 
+* BUT we are _quite informal in assessing plots_
+* Data plots are also statistics 
+* **_Data plots ought to be treated with the same rigour as numerical statistics_**
+]
+.w-30.pa3.center[
+
+Frequentist framework
+
+&lt;img src="images/frequentist-framework.svg"&gt;
+]]
+
+---
+
+# .yellow[Assessing data plots] &lt;i class="fas fa-gavel"&gt;&lt;/i&gt; Case study with residual plots .f4[Part 2]
+
+* **Hypotheses**: `\(H_0\)`: `\(e_i \sim NID(0, \sigma^2)\)` vs. `\(H_1\)`: not `\(H_0\)`
+* **Assumptions**: `\(\sigma^2\)` is known and is equal to maximum likelihood estimate
+* **Test statistic**: Residual plot
+* **P-value**: ???
+
+--
+
+* We can use the approach by Buja et al. (2009):
+.f4[
+1. Strip away context from data plot so there is no bias
+2. Generate the null data under `\(H_0\)`
+3. Create `\(k-1\)` "null plots" by using visual encoding choice as data plot but using the null data
+4. Embed the data plot in a random position within the lineup of null plots
+5. Ask `\(m\)` observers which plot is the most different in the lineup and let `\(X\)` be the # of observers who detected the data plot
+7. Assuming observers are independent and equal visual ability, `\(X \sim B(m, 1/k)\)`.
+8. And the P-value (or "see-value") is given as `\(P(X \geq x)\)`.
+]
+
+
+.footnote.f5[
+Buja, Andreas, Dianne Cook, Heike Hofmann, Michael Lawrence, Eun-Kyung Lee, Deborah F. Swayne, and Hadley Wickham. 2009. “Statistical Inference for Exploratory Data Analysis and Model Diagnostics.” Philosophical Transactions. Series A, Mathematical, Physical, and Engineering Sciences 367 (1906): 4361–83.
+]
+
+---
+
+# .yellow[Assessing data plots] &lt;i class="fas fa-gavel"&gt;&lt;/i&gt; An example lineup
+
+.flex[
+.w-70[
+Which plot looks the most different to you?
+
+&lt;img src="images/resplot-lineup-1.png" width="720" style="display: block; margin: auto;" /&gt;
+
+]
+.w-30.f4[
+{{content}}
+]]
+
+--
+
+* The data generating process is `$$y = 1 + 2x +  sin(x) + e$$` where `\(e \sim N(0, 1)\)`
+* The fitted model is `$$y = \beta_0 + \beta_1 x + e$$`  where `\(e \sim N(0, \sigma^2)\)`
+* The position of the data plot is 12
+
+
+
+---
+
+class: transition
+
+# The Grammar of &lt;br&gt; .yellow[Experimental Designs]
+
+---
+
+background-color: #e3e3e3
+
+
+# Classical split-plot design
+
+.context-box[
+Study of **two irrigation methods** and **two fertilizer brands** on the yields of a crop. 
+]
+
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src='images/split1.png' alt="Figure shows four rectangles that respresent the wholeplots"&gt;
+&lt;/center&gt;
+
+
+
+???
+
+To begin with let's have a look at this classical split-plot design. 
+The context of this experiment is that it's a study on the yields of a crop with two irrigation methods, either irrigated or rain-fed, and two fertilizer brands. 
+
+So in order to conduct this study, the experimental resources that is available to us is this land where there are four fields, which I'm going to referring to these as the wholeplot. 
+
+---
+
+background-color: #e3e3e3
+count: false
+
+# Classical split-plot design
+
+.context-box[
+Study of **two irrigation methods** and **two fertilizer brands** on the yields of a crop. 
+]
+
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src='images/split2.png' alt="The outer two wholeplots have received irrigation while the middle two wholeplots is rain-fed."&gt;
+&lt;/center&gt;
+
+
+
+???
+
+Now for the irrigation method, we have a restriction such that only one irrigation method can be applied per wholeplot. So what you see here, where we got the irrigated wholeplots on the edges and the rainfed wholeplots in the middle, is just one possible randomisation of the irrigation method on the whole plots. 
+
+---
+
+background-color: #e3e3e3
+count: false
+
+# Classical split-plot design
+
+.context-box[
+Study of **two irrigation methods** and **two fertilizer brands** on the yields of a crop. 
+]
+
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src='images/split3.png' alt="the wholeplots are split into two with 8 subplots in total"&gt;
+&lt;/center&gt;
+
+
+
+???
+
+Then what we do next is to split the wholeplot into two subplots, which means that we have 8 subplots in total.
+
+---
+
+count: false
+background-color: #e3e3e3
+
+# Classical split-plot design
+
+.context-box[
+Study of **two irrigation methods** and **two fertilizer brands** on the yields of a crop. 
+]
+
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src='images/split4.png' alt="The first subplot receives fertilizer brand A, second subplot receives fertilizer brand B, third one is B, fourth one is A, fifth one is B, sixth one is A, seventh one is B and last one is A."&gt;
+&lt;/center&gt;
+
+
+
+???
+
+Now the fertilizer can be applied to each subplots independently. We don't want to confound the fertilizer brands to the wholeplot, so for each wholeplot, we randomly apply one fertilizer brand to one subplot and the the remaining subplot receives the other fertilizer brand. What you see here is one possible restricted randomisation of fertilizer onto subplot.
+
+---
+
+background-color: #e3e3e3
+count: false
+
+# Classical split-plot design
+
+.context-box[
+Study of **two irrigation methods** and **two fertilizer brands** on the yields of a crop. 
+]
+
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src='images/split5.png' alt="shows the final split plot with randomisation combined from the ones described before"&gt;
+&lt;/center&gt;
+
+
+???
+
+Putting together the two randomisation results, here we have our classical split plot design. 
+
+---
+
+# The *grammar of experimental design* with `edibble`
+
+.flex.h-100[
+.w-65[
+
+```r
+library(edibble)
+*start_design("split-plot")
+```
+
+]
+.w-35.pl3.pr3.monash-bg-gray10[
+
+.summary-box.w-100[
+* Initialises an object with a special class
+* It doesn't really contain much at this stage
+
+]
+
+
+
+.output-box.f6[
+
+```
+## split-plot
+```
+
+]
+
+
+
+
+]
+
+]
+
+???
+
+I've been working on an alternative method implemented as the edibble R package which builds the experimental design progressively by mapping experimental components to an object oriented system. So let me show how it works. First I'm indicating that I'm creating a new experimental design named split plot which creates an intermediate construct of the experimental design.
+
+---
+
+
+# The *grammar of experimental design* with `edibble`
+
+.flex.h-100[
+.w-65[
+
+```r
+library(edibble)
+start_design("split-plot") %&gt;% 
+* set_units(wholeplot = 4)
+```
+
+]
+.w-35.pl3.pr3.monash-bg-gray10[
+
+.summary-box.w-100[
+* Now we specify that there are 4 wholeplots
+* The object holds the *intermediate construct* of an experimental design
+]
+
+.output-box.f6.w-100[
+
+```
+## split-plot
+## └─wholeplot (4 levels)
+```
+
+]
+
+
+]
+
+]
+
+???
+
+Next, in my code I explicit input that there are 4 wholeplots by using the `set_units` function.
+
+---
+
+# The *grammar of experimental design* with `edibble`
+
+.flex.h-100[
+.w-65[
+
+```r
+library(edibble)
+start_design("split-plot") %&gt;% 
+  set_units(wholeplot = 4) %&gt;% 
+* set_units(subplot = nested_in(wholeplot, 2))
+```
+
+]
+.w-35.pl3.pr3.monash-bg-gray10[
+
+.summary-box.w-100[
+* Then we specify that there are 2 subplots for each wholeplot
+* The name of the units are not restricted to "wholeplot" and "subplot"; the user can use _any_ name
+]
+
+.output-box.f6.w-100[
+
+```
+## split-plot
+## └─wholeplot (4 levels)
+##   └─subplot (8 levels)
+```
+
+]
+
+
+]
+
+]
+
+???
+
+Next I split each wholeplot into two subplots and I do this by set_units and nested_in and the code now reads that there is a unit called subplot and it is nested in wholplot with 2 subplots per wholeplot. 
+
+---
+
+# The *grammar of experimental design* with `edibble`
+
+.flex.h-100[
+.w-65[
+
+```r
+library(edibble)
+start_design("split-plot") %&gt;% 
+* set_units(wholeplot = 4,
+*           subplot = nested_in(wholeplot, 2))
+```
+
+]
+.w-35.pl3.pr3.monash-bg-gray10[
+
+.summary-box.w-100[
+* We can combine the "set_units" 
+]
+
+.output-box.f6.w-100[
+
+```
+## split-plot
+## └─wholeplot (4 levels)
+##   └─subplot (8 levels)
+```
+
+]
+
+
+]
+]
+
+???
+
+I don't have to have a separate set_units function, it can all be within one set_units function and this will still be the same result.
+
+---
+
+# The *grammar of experimental design* with `edibble`
+
+.flex[
+.w-65[
+
+```r
+library(edibble)
+start_design("split-plot") %&gt;% 
+  set_units(wholeplot = 4, 
+            subplot = nested_in(wholeplot, 2)) %&gt;% 
+* set_trts(water = c("irrigated", "rainfed"),
+*          fertilizer = c("A", "B"))
+```
+
+]
+.w-35.pl3.pr3.monash-bg-gray10[
+
+.summary-box.w-100[
+* We now set the treatments
+* There are 2 treatment factors (water and fertilizer) with 2 levels each
+]
+
+.output-box.f6.w-100[
+
+```
+## split-plot
+## ├─wholeplot (4 levels)
+## │ └─subplot (8 levels)
+## ├─water (2 levels)
+## └─fertilizer (2 levels)
+```
+
+]
+
+
+]
+
+]
+
+???
+
+Next I'm defining the treatments, there are two factors which is the irrigation method and fertilizer brand. 
+
+---
+
+# The *grammar of experimental design* with `edibble`
+
+.flex[
+.w-65[
+
+```r
+library(edibble)
+start_design("split-plot") %&gt;% 
+* set_trts(water = c("irrigated", "rainfed"),
+*          fertilizer = c("A", "B")) %&gt;%
+  set_units(wholeplot = 4, 
+            subplot = nested_in(wholeplot, 2)) 
+```
+
+]
+.w-35.pl3.pr3.monash-bg-gray10[
+
+.summary-box.w-100[
+* You can set the treatment before the units
+]
+
+.output-box.f6.w-100[
+
+```
+## split-plot
+## ├─water (2 levels)
+## ├─fertilizer (2 levels)
+## └─wholeplot (4 levels)
+##   └─subplot (8 levels)
+```
+
+]
+
+
+]
+
+]
+
+---
+
+# The *grammar of experimental design* with `edibble`
+
+.flex[
+.w-65[
+
+```r
+library(edibble)
+start_design("split-plot") %&gt;% 
+* set_trts(water = c("irrigated", "rainfed")) %&gt;%
+  set_units(wholeplot = 4) %&gt;% 
+* set_trts(fertilizer = c("A", "B")) %&gt;%
+  set_units(subplot = nested_in(wholeplot, 2)) 
+```
+
+]
+.w-35.pl3.pr3.monash-bg-gray10[
+
+.summary-box.w-100[
+* Or mix it as you like (although subplot needs to appear after wholeplot)
+* The edibble system tries to support a natural order to define the experimental structure 
+]
+
+.output-box.f6.w-100[
+
+```
+## split-plot
+## ├─water (2 levels)
+## ├─wholeplot (4 levels)
+## │ └─subplot (8 levels)
+## └─fertilizer (2 levels)
+```
+
+]
+
+
+]
+
+]
+
+
+---
+
+# The *grammar of experimental design* with `edibble`
+
+.flex.h-100[
+.w-65[
+
+```r
+library(edibble)
+start_design("split-plot") %&gt;% 
+  set_units(wholeplot = 4, 
+            subplot = nested_in(wholeplot, 2)) %&gt;% 
+  set_trts(water = c("irrigated", "rainfed"), 
+           fertilizer = c("A", "B")) %&gt;% 
+* allocate_trts(water ~ wholeplot,
+*               fertilizer ~ subplot)
+```
+
+]
+.w-35.pl3.pr3.monash-bg-gray10[
+
+.summary-box.w-100[
+* We then define the mapping of treatment to units
+* The print output doesn't look any different
+]
+
+.output-box.f6.w-100[
+
+```
+## split-plot
+## ├─wholeplot (4 levels)
+## │ └─subplot (8 levels)
+## ├─water (2 levels)
+## └─fertilizer (2 levels)
+```
+
+]
+
+
+]
+
+]
+
+???
+
+Then I define my intention to allocate which treatments to which units. So you see here water, or the irrigation method, is allocated to wholeplots and fertilizer brands to subplot. 
+
+---
+
+# The *grammar of experimental design* with `edibble`
+
+.flex[
+.w-65[
+
+```r
+library(edibble)
+start_design("split-plot") %&gt;% 
+  set_units(wholeplot = 4, 
+            subplot = nested_in(wholeplot, 2)) %&gt;% 
+  set_trts(water = c("irrigated", "rainfed"), 
+           fertilizer = c("A", "B")) %&gt;% 
+  allocate_trts(water ~ wholeplot, 
+                fertilizer ~ subplot) %&gt;% 
+* randomise_trts()
+```
+
+]
+.w-35.pl3.pr3.monash-bg-gray10[
+
+.summary-box.w-100[
+* Then we randomise the treatment to units
+* Again, the output doesn't look different
+]
+
+.output-box.f6.w-100[
+
+```
+## split-plot
+## ├─wholeplot (4 levels)
+## │ └─subplot (8 levels)
+## ├─water (2 levels)
+## └─fertilizer (2 levels)
+```
+
+]
+
+
+]
+
+]
+
+???
+
+Then we randomise the treatments to the units. The benefit of this approach is that you can mix and match any steps you like if you don't like the original implementation. 
+
+---
+
+# The *grammar of experimental design* with `edibble`
+
+.flex.h-100[
+.w-65[
+
+```r
+library(edibble)
+start_design("split-plot") %&gt;% 
+  set_units(wholeplot = 4,
+            subplot = nested_in(wholeplot, 2)) %&gt;% 
+  set_trts(water = c("irrigated", "rainfed"),
+           fertilizer = c("A", "B")) %&gt;% 
+  allocate_trts(water ~ wholeplot,
+                fertilizer ~ subplot) %&gt;% 
+  randomise_trts() %&gt;% 
+* serve_table()
+```
+
+]
+.w-35.pl3.pr3.monash-bg-gray10[
+
+.summary-box.w-100[
+* Finally, we signal that we're done constructing the design
+* The output gets converted to a data frame
+]
+
+.output-box.f6.w-100[
+
+```
+## # An edibble: 8 x 4
+##    wholeplot   subplot     water fertilizer
+##    &lt;unit(4)&gt; &lt;unit(8)&gt;  &lt;trt(2)&gt;   &lt;trt(2)&gt;
+## 1 wholeplot1  subplot1 rainfed            B
+## 2 wholeplot1  subplot2 rainfed            A
+## 3 wholeplot2  subplot3 irrigated          B
+## 4 wholeplot2  subplot4 irrigated          A
+## 5 wholeplot3  subplot5 irrigated          A
+## 6 wholeplot3  subplot6 irrigated          B
+## 7 wholeplot4  subplot7 rainfed            A
+## 8 wholeplot4  subplot8 rainfed            B
+```
+
+]
+
+]
+
+]
+
+???
+
+Now finally you can signal that you're done constructing the design and get the output as a data frame using the serve_table command.
+
+
+
+---
+
+# The *grammar of experimental design* with `edibble`
+
+.flex.h-100[
+.w-65[
+
+```r
+library(edibble)
+start_design("Modified allocation") %&gt;% 
+  set_units(wholeplot = 4,
+            subplot = nested_in(wholeplot, 2)) %&gt;% 
+  set_trts(water = c("irrigated", "rainfed"),
+           fertilizer = c("A", "B")) %&gt;% 
+* allocate_trts(water:fertilizer ~ subplot) %&gt;%
+  randomise_trts() %&gt;% 
+  serve_table()
+```
+
+]
+.w-35.pl3.pr3.monash-bg-gray10[
+
+.summary-box.w-100[
+* Let's say we modify the treatment allocation
+{{content}}
+]
+
+.output-box.f6.w-100[
+
+```
+## # An edibble: 8 x 4
+##    wholeplot   subplot     water fertilizer
+##    &lt;unit(4)&gt; &lt;unit(8)&gt;  &lt;trt(2)&gt;   &lt;trt(2)&gt;
+## 1 wholeplot1  subplot1 irrigated          A
+## 2 wholeplot1  subplot2 irrigated          B
+## 3 wholeplot2  subplot3 rainfed            B
+## 4 wholeplot2  subplot4 rainfed            A
+## 5 wholeplot3  subplot5 rainfed            B
+## 6 wholeplot3  subplot6 rainfed            A
+## 7 wholeplot4  subplot7 irrigated          B
+## 8 wholeplot4  subplot8 irrigated          A
+```
+
+]
+
+]
+
+]
+
+--
+
+* The resulting design is what we call "randomised complete block design"
+
+---
+
+# Main contributions
+
+.summary-box.w-100[
+* The &lt;span class="red"&gt;*grammar of experimental design*&lt;/span&gt; is a (programming language agnostic) framework that functionally maps the fundamental components of the experiment to an object oriented programming system to build and modify an experimental design
+{{content}}
+]
+
+--
+
+* The &lt;span class="red"&gt;*edibble*&lt;/span&gt; R-package is an implementation of the grammar of experimental design in the R language 
+&lt;center&gt;
+&lt;a href="https://github.com/emitanaka/edibble"&gt;&lt;i class="fas fa-code"&gt;&lt;/i&gt;  https://github.com/emitanaka/edibble&lt;/a&gt;
+&lt;/center&gt;
+{{content}}
+--
+
+* The approach is designed to be &lt;span class="red"&gt;*human-friendly*&lt;/span&gt; and accommodate natural order of thinking for specifying experimental structure
+{{content}}
+--
+
+* The approach also &lt;span class="red"&gt;*promotes higher order thinking about experimental design*&lt;/span&gt;, e.g. the difference between a split-plot design and a randomised complete block design is pronounced in code
+{{content}}
+--
+
+* Finally, the grammar makes each step modular... you can &lt;span class="red"&gt;*easily extend*&lt;/span&gt; or &lt;span class="red"&gt;*mix-and-match methods*&lt;/span&gt;
+
+---
+
+# Summary
+
+* **Adopting good computational practices** is important to me for transparency and reproducibility (e.g. version control, sharing code, open-source tools)
+* **Visual inference** extends statistical inference to data visualisation
+* I proactively work in **software development with human-centered design for the design of experiments**
+* You can find these slides and *code* at: 
+
+.flex[
+.w-20[
+]
+.w-80[
+&lt;i class="fas fa-link"&gt;&lt;/i&gt; [emitanaka.org/slides-DARE-LOOP](https://emitanaka.org/slides/DARE-LOOP)  
+&lt;i class="fab fa-github"&gt;&lt;/i&gt; [github.com/emitanaka/slides-DARE-LOOP](github.com/emitanaka/slides-DARE-LOOP)
+]
+]
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="lib/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "magula",
+"highlightLanguage": "r",
+"highlightLines": true,
+"highlightSpans": false,
+"countIncrementalSlides": false,
+"slideNumberFormat": "%current%/%total%",
+"navigation": {
+"scroll": false,
+"touch": true,
+"click": false
+},
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'lib/mathjax-local/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
