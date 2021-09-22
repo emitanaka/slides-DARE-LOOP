@@ -891,7 +891,7 @@ start_design("Modified allocation") %>%
 ]
 .w-80[
 <i class="fas fa-link"></i> [emitanaka.org/slides-DARE-LOOP](https://emitanaka.org/slides/DARE-LOOP)  
-<i class="fab fa-github"></i> [github.com/emitanaka/slides-DARE-LOOP](github.com/emitanaka/slides-DARE-LOOP)
+<i class="fab fa-github"></i> [https://github.com/emitanaka/slides-DARE-LOOP](github.com/emitanaka/slides-DARE-LOOP)
 ]
 ]
 
